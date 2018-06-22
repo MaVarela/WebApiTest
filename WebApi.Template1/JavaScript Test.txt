@@ -1,0 +1,52 @@
+JavaScript Test
+
+1)
+
+function Employee(first, last, salary) {
+    this.firstName = first;
+    this.lastName = last;
+    this.salary = salary;
+}
+Employee.prototype.details = function() {
+    return this.firstName + " " + this.lastName + "<br>" +"Salario: " + this.salary;
+};
+Employee.prototype.incrementoSalario = function() {
+    this.salary += 1000;
+};
+
+2)
+
+function MultipleBy(num1, num2, num3) {
+    return num1 * num2 * num3;
+}
+
+3)
+
+function  Longest_Country_Name(listado) {
+    var cantidadPaises = listado.length;
+    var pais = "";
+	for (var i = 0; i < cantidadPaises; i++) {
+    	var aux = listado.pop()
+    	if(aux.length > pais.length)
+        pais = aux;
+    }
+    return pais;
+}
+
+4)
+
+function removeColor() {
+    var e = document.getElementById("colorSelect");
+    e.options[e.selectedIndex].remove();
+}
+
+5)
+
+function insert_Row(){
+    var table = document.getElementById("sampleTable");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = "NEW CELL";
+    cell2.innerHTML = "NEW CELL";
+}
